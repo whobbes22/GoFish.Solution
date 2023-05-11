@@ -2,7 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ProjectName.Models;
 
 
-namespace ProjectName.Tests
+namespace GoFish.Tests
 {
   [TestClass]
   public class ClassTests
