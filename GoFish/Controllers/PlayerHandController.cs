@@ -3,7 +3,7 @@ using GoFish.Models;
 
 namespace GoFish.Controllers
 {
-  public class PlayerHandController : Controller
+  public class GameStateController : Controller
   {
     [Route("/")]
     // Notice the changes below!
