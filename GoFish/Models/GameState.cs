@@ -1,8 +1,31 @@
-namespace GoFish.Models //update namespace her
+using System.Collections.Generic;
+
+namespace GoFish.Models
 {
-  public class GameState //create model class here
+  public class GameState 
   {
+    private static List<int> _currentDeck = new List<int> {};
     // Business Logic goes here.
+
+    public List<int> _playerHand = new List<int> {} {get;};
+
+    public static void BuildDeck()
+    {
+      for(int i = 1; i<=52; i++)
+      {
+        _currentDeck.Add(i);
+      }
+    }
+
+    public static List<int> GetCurrentDeck()
+    {
+      return _currentDeck;
+    }
+
+    public List<int> GetPlayerHand()
+    {
+      return _playerHand;
+    }
   }
 }
 
