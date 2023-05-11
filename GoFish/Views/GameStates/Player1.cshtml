@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Go Fish!</title>
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+      crossorigin="anonymous">
+    <meta charset='utf-8'>
+  </head>
+  <body>
+    @using GoFish.Models;
+    <h1>The Best Players turn (player 1)</h1>
+    <p>This is your current hand</p>
+    @if (@Model._currentDeck.Count > 1)
+    {
+      <li>@Model.PlayerHand</li>
+    }
+
+  
+    
+
+    <form action="gamestates/player2" method="post">
+      <button type="submit" name="button">Finish Turn</button>
+    </form>
+  </body>
+</html>    
+
+<!-- @using GoFish.Models
+
+  <li>heres your hand @Model.PlayerHand</li>
+ 
+
+@* you guess
+
+either get it correct and guess again 
+
+or say "go fish" draw a card see if it matches and end turn
+ *@ -->

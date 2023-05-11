@@ -43,7 +43,7 @@ namespace GoFish.Tests
     }
 
     [TestMethod]
-    public void name()
+    public void AddCardToPlayerList_ReturnAddedCard_List()
     {
       GameState playerOne = new GameState();
       GameState playerTwo = new GameState();
@@ -53,8 +53,11 @@ namespace GoFish.Tests
       list<int> p1Hand = playerOne.PlayerHand;
       list<int> p2Hand = playerTwo.PlayerHand;
       
-      Assert.AreEqual(p1Hand,1);
-      Assert.AreEqual(p2Hand,2);
+      list<int> test1 = new list<int> {1};
+      list<int> test2 = new list<int> {2};
+      Console.WriteLine(p1Hand[0],test1[0],p2Hand[0],test2[0]);
+      Assert.AreEqual(p1Hand[0],test1[0]);
+      Assert.AreEqual(p2Hand[0],test2[0]);
     }
 
 
